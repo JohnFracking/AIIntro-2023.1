@@ -9,13 +9,13 @@ public class RandomMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _agent = GetComponenet<NavMeshAgent>();
+        _agent = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(A.destination, transform.position) < 3f)
+        if (Vector3.Distance(_agent.destination, transform.position) < 3f)
 		{
 			float randomX = Random.Range (-10f, 10f);
 			float randomZ = Random.Range (-10f, 10f);
